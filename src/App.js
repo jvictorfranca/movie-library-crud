@@ -6,6 +6,7 @@ import NewMovie from './pages/NewMovie';
 import MovieDetails from './pages/MovieDetails';
 import EditMovie from './pages/EditMovie';
 import NotFound from './pages/NotFound';
+import DeleteMovie from './pages/DeleteMovie';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
           path="/movies/:id/edit"
           render={ (props) => <EditMovie { ...props } /> }
         />
+        <Route path="/movies/:id/delete" component={ DeleteMovie } />
         <Route component={ NotFound } />
+
       </Switch>
     </BrowserRouter>
   );

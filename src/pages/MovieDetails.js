@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
 import Details from '../components/Details';
@@ -32,8 +33,9 @@ class MovieDetails extends Component {
   }
 
   render() {
-    // Change the condition to check the state
-    // if (true) return <Loading />;
+    const { match } = this.props;
+    const { params } = match;
+    const { id } = params;
     const { movie } = this.state;
     console.log(movie);
 
@@ -42,6 +44,7 @@ class MovieDetails extends Component {
         {movie === undefined
           ? <Loading />
           : <Details movie={ movie } />}
+        <Link to={ `/movies/${id}/delete` }>DELETAR</Link>
       </div>
     );
   }
