@@ -8,7 +8,6 @@ class EditMovie extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shouldRedirect: false,
       movie: undefined,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,7 +35,6 @@ class EditMovie extends Component {
     const { params } = match;
     const { id } = params;
 
-    console.log(id);
     const movie = await movieAPI.getMovie(id);
     this.setState({
       movie,
@@ -44,10 +42,7 @@ class EditMovie extends Component {
   }
 
   render() {
-    const { shouldRedirect, movie } = this.state;
-    if (shouldRedirect) {
-      // Redirect
-    }
+    const { movie } = this.state;
 
     return (
       <div data-testid="edit-movie">
