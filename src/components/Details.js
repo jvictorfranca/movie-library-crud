@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import './Details.css';
 
 class Details extends Component {
   render() {
@@ -10,15 +11,18 @@ class Details extends Component {
 
     return (
       <div data-testid="movie-details">
-        <img alt="Movie Cover" src={ `../${imagePath}` } />
+        <img alt="Movie Cover" src={ `../${imagePath}` } className="img-details" />
         <p>{`Title: ${title}`}</p>
         <p>{ `Subtitle: ${subtitle}` }</p>
         <p>{ `Storyline: ${storyline}` }</p>
         <p>{ `Genre: ${genre}` }</p>
         <p>{ `Rating: ${rating}` }</p>
-        <Link to="/">VOLTAR</Link>
-        <Link to={ `/movies/${id}/edit` }> EDITAR </Link>
-        {/* <Link to={ `/movies/${id}/delete` }>DELETAR</Link> */}
+        <nav className="details-buttons-container">
+          <Link to="/" className="details-button">Back</Link>
+          <Link to={ `/movies/${id}/edit` } className="details-button"> Edit </Link>
+          <Link to={ `/movies/${id}/delete` } className="details-button">Delete</Link>
+        </nav>
+
       </div>
     );
   }

@@ -23,9 +23,11 @@ class EditMovie extends Component {
     this.setState(() => ({
       movie,
     }), () => {
-      const { history } = this.props;
+      const { history, match } = this.props;
+      const { params } = match;
+      const { id } = params;
       movieAPI.updateMovie(movie).then(
-        history.push('/'),
+        history.push(`/movies/${id}`),
       );
     });
   }

@@ -47,7 +47,7 @@ class MovieDetails extends Component {
         {movie === undefined
           ? <Loading />
           : <Details movie={ movie } />}
-        <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
+        {/* <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link> */}
       </div>
     );
   }

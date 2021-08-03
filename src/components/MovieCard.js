@@ -14,7 +14,7 @@ class MovieCard extends React.Component {
         <h5 className="movie-card-subtitle">{subtitle}</h5>
         <p className="movie-card-storyline">{storyline}</p>
         <img src={ imagePath } alt="" className="movie-card-image" />
-        <Link to={ `/movies/${id}` }> VER DETALHES </Link>
+        <Link to={ `/movies/${id}` } className="link-button"> More info </Link>
         <Rating rating={ rating } />
       </div>
     );

@@ -4,12 +4,36 @@ body {
   font-size: 16px;
 }
 
+
 .movie-card-header {
   align-items: center;
   background-color: #343a40;
   display: flex;
-  height: 100px;
+  flex-direction: column;
+  height: 20%;
   justify-content: center;
+}
+
+.header-buttons-container {
+  align-self: flex-start;
+  display: flex;
+  height: 40%;
+  margin-bottom: 10px;
+  width: 20%;
+}
+
+.header-buttons-container .header-link {
+  border: solid white 1px;
+  border-radius: 10px;
+  color: white;
+  margin: 3px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.header-buttons-container .header-link:hover {
+  background-color: white;
+  color: #343a40;
 }
 
 .page-title {
@@ -22,7 +46,7 @@ body {
 .movie-list {
   display: flex;
   flex-flow: row wrap;
-  padding: 48px 30px;
+  padding: 3px 48px 48px 30px;
 
 }
 
@@ -35,6 +59,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
+  max-width: 600px;
   overflow: hidden;
   width: 300px;
 }
@@ -84,4 +109,47 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
+}
+
+.search-bar {
+  align-items: center;
+  background-color: rgb(71, 73, 110);
+  display: flex;
+  height: 7vh;
+  justify-content: space-around;
+  margin-bottom: 1%;
+  width: 100%;
+}
+
+.search-bar label {
+  align-items: center;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.search-bar input, .search-bar select {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.movie-card .link-button {
+  background-color: rgb(71, 73, 110);
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+}
+
+.movie-card .link-button:hover {
+  background-color: rgb(165, 168, 243);
+  color: rgb(71, 73, 110);
 }

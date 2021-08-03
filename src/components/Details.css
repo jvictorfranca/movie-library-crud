@@ -1,0 +1,33 @@
+.details-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details-button {
+  background-color: #343a40;
+  border: solid black 1px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+  margin-top: 3%;
+  padding: 1%;
+  text-decoration: none;
+}
+
+.details-button:hover {
+  background-color: white;
+  color: #343a40;
+}
+
+.img-details {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+
+}
+
+p {
+  font-size: 150%;
+  margin-left: 3%;
+}
