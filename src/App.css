@@ -11,6 +11,19 @@ body {
   width: 100%;
 }
 
+.movies-form {
+  margin: auto;
+  padding-top: 10px;
+  width: 70%;
+}
+
+.movies-form label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 50%;
+}
+
 .loading-div {
   animation: spin 1s linear infinite;
   border: 16px solid rgb(102, 104, 158);

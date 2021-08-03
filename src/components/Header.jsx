@@ -9,7 +9,7 @@ class Header extends React.Component {
         <h1 className="page-title">Movie Cards Library</h1>
         <nav className="header-buttons-container">
           <Link to="/" className="header-link">HOME</Link>
-          <Link to="/movies/new" className="header-link">ADICIONAR CARTÃO</Link>
+          <Link to="/movies/new" className="header-link">ADD MOVIE</Link>
         </nav>
 
       </header>
