@@ -12,10 +12,10 @@ body {
 }
 
 .loading-div {
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
   border: 16px solid rgb(102, 104, 158);
   border-radius: 50%;
-  border-top: 16px solid #343a40;
+  border-top: solid 16px #343a40;
   height: 200px;
   margin-top: 100px;
   width: 200px;
