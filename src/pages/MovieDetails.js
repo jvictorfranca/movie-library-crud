@@ -13,7 +13,7 @@ class MovieDetails extends Component {
       movie: undefined,
     };
     this.getMovieArray = this.getMovieArray.bind(this);
-    console.log(this);
+    this.deleteMovie = this.deleteMovie.bind(this);
   }
 
   componentDidMount() {
@@ -32,19 +32,22 @@ class MovieDetails extends Component {
     });
   }
 
-  render() {
-    const { match } = this.props;
+  deleteMovie() {
+    const { match, history } = this.props;
     const { params } = match;
     const { id } = params;
+    movieAPI.deleteMovie(id).then(history.push('/'));
+  }
+
+  render() {
     const { movie } = this.state;
-    console.log(movie);
 
     return (
       <div>
         {movie === undefined
           ? <Loading />
           : <Details movie={ movie } />}
-        <Link to={ `/movies/${id}/delete` }>DELETAR</Link>
+        <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
       </div>
     );
   }
@@ -55,6 +58,11 @@ MovieDetails.propTypes = {
 
     params: PropTypes.shape({
       id: PropTypes.string,
+    }),
+  }).isRequired,
+  history: PropTypes.shape({
+
+    push: PropTypes.shape({
     }),
   }).isRequired,
 };
